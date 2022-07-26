@@ -30,6 +30,14 @@ class Images(Enum):
    BACKGROUND = _load_image('bg.png')
 
 
+class Bird_config(Enum):
+   MAX_ROTATION = 25
+   MIN_ROTATION = -60
+   ROTATION_SPEED = 20
+   ANIMATION_TIME = 5
+
+   SPEED = 10.5
+
 if __name__ == "__main__":
    print("OK!")
    
