@@ -36,7 +36,7 @@ class Bird:
          if self.angle > Bird_config.MIN_ROTATION.value:
             self.angle -= Bird_config.ROTATION_SPEED.value
 
-   def draw(self, display) -> None:
+   def draw(self, surface) -> None:
       self.image_count += 1
 
       time = Bird_config.ANIMATION_TIME.value
@@ -61,7 +61,7 @@ class Bird:
 
       image_rotation = pygame.transform.rotate(surface=self.image, angle=self.angle)
       image_center = self.image.get_rect(topleft=(self.x, self.y)).center
-      display.blit(
+      surface.blit(
          source=image_rotation,
          dest=image_rotation.get_rect(center=image_center).topleft
       )
