@@ -38,6 +38,12 @@ class Bird_config(Enum):
 
    SPEED = 10.5
 
+
+class Pipe_config(Enum):
+   DISTANCE = dict(max=200, min=100)
+   SPEED = 5
+
+
 if __name__ == "__main__":
    print("OK!")
    
