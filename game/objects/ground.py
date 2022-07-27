@@ -1,8 +1,9 @@
 from pygame import Surface
 from game.config import Images, Ground_config
+from game.objects.abstract_object import GameObject
 
 
-class Ground:
+class Ground(GameObject):
    def __init__(self, x_start_position, y_start_position) -> None:
       self.x = x_start_position
       self.y = y_start_position

@@ -1,10 +1,11 @@
 import pygame
 from random import randrange
 from game.config import Images, Pipe_config
+from game.objects.abstract_object import GameObject
 from game.objects.bird import Bird
 
 
-class Pipe:
+class Pipe(GameObject):
    def __init__(self, x_start_position) -> None:
       self.x = x_start_position
       self.top_pipe = pygame.transform.flip(

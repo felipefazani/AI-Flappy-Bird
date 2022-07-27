@@ -1,8 +1,10 @@
 from game.config import Config, Images, Bird_config
 import pygame
 
+from game.objects.abstract_object import GameObject
 
-class Bird:
+
+class Bird(GameObject):
 
    def __init__(self, x_start_position, y_start_position) -> None:
       self.x = x_start_position
