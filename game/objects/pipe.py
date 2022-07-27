@@ -17,7 +17,10 @@ class Pipe:
 
       self.height = randrange(start=25, stop=475)
       self.top_position = self.height - self.top_pipe.get_height()
-      self.ground_position = self.height + Pipe_config.DISTANCE.value['max']
+
+      max_value = Pipe_config.DISTANCE.value['max']
+      min_value = Pipe_config.DISTANCE.value['min']
+      self.ground_position = self.height + randrange(start=min_value, stop=max_value)
 
    def move(self) -> None:
       self.x -= Pipe_config.SPEED.value
