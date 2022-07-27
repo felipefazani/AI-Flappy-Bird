@@ -44,6 +44,10 @@ class Pipe_config(Enum):
    SPEED = 5
 
 
+class Ground_config(Enum):
+   SPEED = 5
+
+
 if __name__ == "__main__":
    print("OK!")
    
