@@ -36,7 +36,7 @@ class Bird:
          if self.angle > Bird_config.MIN_ROTATION.value:
             self.angle -= Bird_config.ROTATION_SPEED.value
 
-   def draw(self, surface) -> None:
+   def draw(self, surface : pygame.Surface) -> None:
       self.image_count += 1
 
       time = Bird_config.ANIMATION_TIME.value
