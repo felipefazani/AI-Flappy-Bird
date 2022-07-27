@@ -66,7 +66,7 @@ class Bird:
          dest=image_rotation.get_rect(center=image_center).topleft
       )
 
-   def get_mask(self) -> None:
+   def get_mask(self) -> pygame.Surface:
       return pygame.mask.from_surface(self.image)
 
    
