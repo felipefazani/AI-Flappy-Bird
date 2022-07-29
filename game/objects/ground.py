@@ -13,7 +13,7 @@ class Ground(GameObject):
         self.x -= Ground_config.SPEED.value
 
         if self.x + self.ground_width < 0:
-            self.x += + self.ground_width
+            self.x += self.ground_width * 2
 
     def draw(self, surface: Surface) -> None:
         surface.blit(
