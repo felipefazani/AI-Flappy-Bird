@@ -19,7 +19,7 @@ class Bird(GameObject):
         self.height = self.y
 
     def move(self) -> None:
-        self.time += 0
+        self.time += 1
 
         # Uniformly Accelerated Motion
         displacement = self.speed * self.time + 1.5 * self.time ** 2
@@ -29,7 +29,7 @@ class Bird(GameObject):
         elif displacement > 16:
             displacement = 16
 
-        self.y = displacement
+        self.y += displacement
 
         if displacement > 0 or self.y < self.height - 50:
             if self.angle < Bird_config.MAX_ROTATION.value:
@@ -61,7 +61,9 @@ class Bird(GameObject):
             self.image_count = time * 2
 
         image_rotation = pygame.transform.rotate(
-            surface=self.image, angle=self.angle)
+            surface=self.image, angle=self.angle
+        )
+        
         image_center = self.image.get_rect(topleft=(self.x, self.y)).center
         surface.blit(
             source=image_rotation,
