@@ -16,7 +16,7 @@ class Pipe(GameObject):
         self.ground_pipe = Images.PIPE.value
         self.left_screen = False
 
-        self.height = randrange(start=25, stop=475)
+        self.height = randrange(start=50, stop=450)
         self.top_position = self.height - self.top_pipe.get_height()
 
         max_value = Pipe_config.DISTANCE.value['max']
