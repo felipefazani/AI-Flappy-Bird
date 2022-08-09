@@ -3,7 +3,21 @@ import pygame
 from os.path import join
 
 
+class CountGen:
+    count = 0
+
+    @classmethod
+    def sum_one(cls):
+        cls.count += 1
+
+    @classmethod
+    def get_count(cls):
+        return cls.count
+
+
 class Config(Enum):
+    AI = False
+
     WINDOW_WIDTH = 500
     WINDOW_HEIGHT = 700
 
@@ -15,6 +29,7 @@ class Config(Enum):
     )
     POINTS_RGB = (250, 250, 250)
     POINTS_POSITION = (15, 15)
+    GEN_POSITION = (15, 45)
 
     BIRD_START_POSITION = dict(x=230, y=350)
     GROUND_START_HEIGHT = 650
